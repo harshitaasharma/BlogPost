@@ -1,0 +1,8 @@
+<%- include("partials/header"); -%>
+<h1>Home</h1>
+<p><%=startingContent%></p>
+<%posts.forEach(function(jelly){%>
+  <h1><%=jelly.title;%></h1>
+   <p><%=jelly.body.substring(0,101)+" .....";%><a href="/posts/<%=jelly.title%>">Read More</a></p>
+<%});%>
+<%- include("partials/footer"); -%>
